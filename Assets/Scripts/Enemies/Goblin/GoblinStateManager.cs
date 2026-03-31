@@ -1,6 +1,5 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
 public class GoblinStateManager : MonoBehaviour
 {
     [Header("Movement & Gravity")]
@@ -91,11 +90,5 @@ public class GoblinStateManager : MonoBehaviour
         patrolTargetX = startPosition.x + Random.Range(-patrolRange, patrolRange);
     }
 
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, chaseRange);
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, attackRange);
-    }
+   
 }
